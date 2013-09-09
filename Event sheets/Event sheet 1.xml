@@ -1,0 +1,1080 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="win" sid="6454641182854153" static="0" type="number">2</variable>
+        <variable constant="0" name="level" sid="5163647800632665" static="0" type="number">1</variable>
+        <variable constant="0" name="reloaded" sid="6428476780005632" static="0" type="number">0</variable>
+        <variable constant="0" name="dialPos" sid="2649941937588873" static="0" type="number">0</variable>
+        <variable constant="0" name="uma2" sid="7009623798576461" static="0" type="number">0</variable>
+        <variable constant="0" name="distorsion" sid="7461438752597927" static="0" type="number">0</variable>
+        <variable constant="0" name="uma" sid="1367074937731024" static="0" type="number">0</variable>
+        <variable constant="0" name="randomizer" sid="325969173996481" static="0" type="number">0</variable>
+        <variable constant="0" name="linex" sid="2806118076434136" static="0" type="number">10</variable>
+        <variable constant="0" name="conta" sid="9594896502776245" static="0" type="number">0</variable>
+        <variable constant="0" name="point" sid="4971531027031044" static="0" type="number">0</variable>
+        <variable constant="0" name="enter" sid="6011134181798651" static="0" type="number">0</variable>
+        <variable constant="0" name="points" sid="7224641292707613" static="0" type="number">0</variable>
+        <variable constant="0" name="zoomFlag" sid="4354202752754419" static="0" type="number">0</variable>
+        <variable constant="0" name="side" sid="5200758392224602" static="0" type="text"></variable>
+        <variable constant="0" name="launch" sid="138724139443081" static="0" type="number">0</variable>
+        <variable constant="0" name="countdown" sid="2596755953461359" static="0" type="number">4</variable>
+        <variable constant="0" name="score" sid="1922914700379097" static="0" type="number">0</variable>
+        <variable constant="0" name="timerr" sid="3256825111095751" static="0" type="number">1</variable>
+        <variable constant="0" name="i" sid="102500668789468" static="0" type="number">1</variable>
+        <variable constant="0" name="absCenter" sid="5035841255806623" static="0" type="number">0</variable>
+        <event-block sid="9058333137185949">
+            <conditions />
+            <actions>
+                <action id="-9" name="Set value" sid="8027366856453799" type="System">
+                    <param id="0" name="Variable">absCenter</param>
+                    <param id="1" name="Value">center.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="3356482792495697" type="System">
+                    <param id="0" name="Variable">dialPos</param>
+                    <param id="1" name="Value">dial.X</param>
+                </action>
+                <action id="4" name="Set animation" sid="1452518934810572" type="dial">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="8231668572257655" type="Sprite17">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8497900269230185" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">200</param>
+                </action>
+                <action id="-9" name="Set value" sid="9224311282098951" type="System">
+                    <param id="0" name="Variable">point</param>
+                    <param id="1" name="Value">200 /blackInk.Count</param>
+                </action>
+                <action id="-9" name="Set value" sid="8273841021591415" type="System">
+                    <param id="0" name="Variable">timerr</param>
+                    <param id="1" name="Value">dt*70</param>
+                </action>
+                <action id="0" name="Set text" sid="6729672775120507" type="sf_Reduced">
+                    <param id="0" name="Text">&quot;&quot;&amp;floor(barraScore.height/2)</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="5213034037923736" type="System">
+                    <param id="0" name="Layer">&quot;Dificultad&quot;</param>
+                    <param id="1" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2460576020824341">
+            <conditions />
+            <actions />
+        </event-block>
+        <comment>Reset</comment>
+        <event-block sid="5404258030677781">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6284317250645734" type="System">
+                    <param id="0" name="Variable">reloaded</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="9108710892092634" type="System" />
+                <action id="-17" name="Set layer scale" sid="8073328071662654" type="System">
+                    <param id="0" name="Layer">&quot;girl&quot;</param>
+                    <param id="1" name="Scale">1</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="8918814666940086" type="System">
+                    <param id="0" name="Layer">&quot;ink&quot;</param>
+                    <param id="1" name="Scale">1</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="2855219753895088" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Scale">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7393110957148497" type="System">
+                    <param id="0" name="Variable">launch</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="4019822263882587" type="System">
+                    <param id="0" name="Variable">countdown</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="754033213623271" type="System">
+                    <param id="0" name="Variable">uma2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="3626102425019058" type="System">
+                    <param id="0" name="Layer">&quot;pencil&quot;</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="9157035318716315" type="System">
+                    <param id="0" name="Layer">&quot;ink&quot;</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="9469597794384648" type="System">
+                    <param id="0" name="Layer">&quot;props&quot;</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="6055314065021795" type="System">
+                    <param id="0" name="Variable">i</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7492376135207407" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="9652259192705538" type="restarting">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="2235673621985353" type="mainmenu">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="696107262314512" type="NextBut">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="5681241607378925" type="restartBut">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="407421373223185" type="System">
+                    <param id="0" name="Variable">reloaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Controles</comment>
+        <event-block sid="2369637943158991">
+            <conditions />
+            <actions />
+            <sub-events>
+                <event-block sid="8802401006247341">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="839748496985022" type="Touch">
+                            <param id="0" name="Object">rightControlI</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="9169649741907201" type="dial">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9221106105813053">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1511557953032069" type="Touch">
+                            <param id="0" name="Object">LeftControlI</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2761102509880111" type="dial">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4284849777945084">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6768512046478069" type="Touch">
+                            <param id="0" name="Object">restarting</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3478445849034454" type="System">
+                            <param id="0" name="Variable">reloaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4338250037063868" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7370609661359081">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="3034051889602057" type="Touch">
+                            <param id="0" name="Object">mainmenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="3859796855758617" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1406861847769782">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2332011732717282" type="Touch">
+                            <param id="0" name="Object">restartBut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6838803063463324" type="System">
+                            <param id="0" name="Variable">reloaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2123623327261462">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2865116441792522" type="Touch">
+                            <param id="0" name="Object">NextBut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7127568043790239" type="System">
+                            <param id="0" name="Variable">reloaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="958653223087282">
+                            <conditions>
+                                <condition id="0" name="On any touch start" sid="7877884155832466" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8313103981919288" type="Function">
+                                    <param id="0" name="Name">&quot;addLevel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8180928865048847">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8934681314472844" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="2914979342648906" type="System">
+                                    <param id="0" name="Layout">Layout 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9628882209548711">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2821452992603774" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="1502537691594957" type="System">
+                                    <param id="0" name="Layout">Layout 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3106423491604089">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1773111849063578" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="2653969767199064" type="System">
+                                    <param id="0" name="Layout">Layout 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6328282358932831">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7503907722113833" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8670745654061408" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="1382276503638539" type="System">
+                                    <param id="0" name="Layout">menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>hiding Ink</comment>
+        <event-block sid="3319415103639469">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="2310908044871838" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5867387180054499" type="blackInk">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8752400417505338" type="color">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Every tick --- Contrl de colisiones</comment>
+        <event-block sid="5970051653002538">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9050260233666576" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1889509919770154" type="System">
+                    <param id="0" name="Variable">conta</param>
+                    <param id="1" name="Value">floor(random(1000))</param>
+                </action>
+                <action id="0" name="Set text" sid="7754152466973281" type="dtVar">
+                    <param id="0" name="Text">&quot;&quot;&amp;timerr</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>contador</comment>
+                <event-block sid="298898153021378">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3251018822667533" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="7433220288666056" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6695589592721154">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7882007369871064" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6463599700051089" type="Sprite17">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3561781117699979" type="Sprite17">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6855834216599586">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8450012572794589" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4715722849038361" type="Sprite17">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6440555540994991">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8059396593796408" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="148383995750404" type="Sprite17">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1197304624358175" type="System">
+                            <param id="0" name="Variable">enter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="347080300414177">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3168180111531907" type="System">
+                            <param id="0" name="Variable">countdown</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="196940488703926" type="Sprite17">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7896598914518736" type="Sprite17">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8357464629618505" type="System">
+                            <param id="0" name="Variable">launch</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Control dial arrowa</comment>
+                <event-block sid="7376922888482272">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="4225963163574685" type="System">
+                            <param id="0" name="Value">dial.X</param>
+                            <param id="1" name="Lower bound">center.X-200</param>
+                            <param id="2" name="Upper bound">center.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8917612792811366" type="Sprite4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3369316295053586" type="Sprite2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1399336930279778" type="System">
+                            <param id="0" name="Variable">side</param>
+                            <param id="1" name="Value">&quot;left&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7622543986999415">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="3081946037367098" type="System">
+                            <param id="0" name="Value">dial.X</param>
+                            <param id="1" name="Lower bound">center.X+1</param>
+                            <param id="2" name="Upper bound">center.X+200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8622278126995985" type="Sprite4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6400786935194664" type="Sprite2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5306320782684909" type="System">
+                            <param id="0" name="Variable">side</param>
+                            <param id="1" name="Value">&quot;right&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Dial collisions shake</comment>
+                <event-block sid="4828897025077823">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="781988243739861" type="dial">
+                            <param id="0" name="Object">paredL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6842621611736833" type="Function">
+                            <param id="0" name="Name">&quot;rebotarL&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="7288691249627009" type="back">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2250608508847376">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8571499254585098" type="dial">
+                            <param id="0" name="Object">paredR</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4132038102398161" type="Function">
+                            <param id="0" name="Name">&quot;rebotarR&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="7410977169104398" type="back">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="1275633674273438">
+                    <conditions>
+                        <condition disabled="1" id="-24" name="For Each (ordered)" sid="7289490656558932" type="System">
+                            <param id="0" name="Object">blackInk</param>
+                            <param id="1" name="Expression">blackInk.UID</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Insert" sid="6710475330752118" type="InkingArray">
+                            <param id="0" name="Value">blackInk.UID</param>
+                            <param id="1" name="Index">uma</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4754523531174494" type="System">
+                            <param id="0" name="Variable">uma</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>On Layout end</comment>
+                <comment>Dissapear</comment>
+                <event-block sid="6095246329381761">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6467342420872267" type="System">
+                            <param id="0" name="Variable">uma2</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">blackInk.Count</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2035936218732913" type="color">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6050882672805763" type="Sprite15">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9851260989412587" type="System">
+                            <param id="0" name="Variable">launch</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="233597061643021" type="System">
+                            <param id="0" name="Layer">&quot;pencil&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="7519221078854343" type="System">
+                            <param id="0" name="Layer">&quot;props&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7900505382997578" type="restartBut">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="4676434655703129" type="mainmenu">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="9632448286122588" type="restarting">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1792716835677096">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5495754307480988" type="System">
+                                    <param id="0" name="First value">barraScore.Height</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">win*2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="5962798326426929" type="NextBut">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Zoom to design</comment>
+                <event-block sid="4506307355839605">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4894267638079916" type="System">
+                            <param id="0" name="Variable">launch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4657711840995305" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3272578076097806">
+                            <conditions>
+                                <condition disabled="1" id="-12" name="Repeat" sid="3247384474255866" type="System">
+                                    <param id="0" name="Count">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="6181149891822185" type="System">
+                                    <param id="0" name="Layer">4</param>
+                                    <param id="1" name="Scale">i</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="5132269233158354" type="System">
+                                    <param id="0" name="Layer">&quot;ink&quot;</param>
+                                    <param id="1" name="Scale">i</param>
+                                </action>
+                                <action id="-17" name="Set layer scale" sid="4239461055573978" type="System">
+                                    <param id="0" name="Layer">&quot;girl&quot;</param>
+                                    <param id="1" name="Scale">i</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="2949155594790101" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">0.001</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7623058197367395">
+                    <conditions />
+                    <actions>
+                        <action id="-6" name="Set height" sid="2853830836127012" type="barraScore">
+                            <param id="0" name="Height">points</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>LLamadas a funciones</comment>
+        <event-block sid="7901800170846067">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7284526487556797" type="System">
+                    <param id="0" name="Interval (seconds)">timerr/100</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6903140892343871" type="System">
+                    <param id="0" name="Variable">launch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4783571705969194">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="8208259821216884" type="System">
+                            <param id="0" name="Value">conta</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">500</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1824882986926868" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8582537185278916" type="System">
+                            <param id="0" name="Variable">uma2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">blackInk.Count</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2978690052043157" type="Function">
+                            <param id="0" name="Name">&quot;pintar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4416868954112963">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="880681569569745" type="System">
+                            <param id="0" name="Value">conta</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">500</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5357871344061515" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2213712293668828" type="System">
+                            <param id="0" name="Variable">uma2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">blackInk.Count</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8949837720384984" type="Function">
+                            <param id="0" name="Name">&quot;pintarmal&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4236967579411224">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="9228680831129251" type="System">
+                            <param id="0" name="Value">conta</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">500</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7498975660145896" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2376791251032868" type="System">
+                            <param id="0" name="Variable">uma2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">blackInk.Count</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9295628317038712" type="Function">
+                            <param id="0" name="Name">&quot;pintarmasmal&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Set distorsion Level</comment>
+        <event-block sid="1745613756659964">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3099959926606477" type="System">
+                    <param id="0" name="Interval (seconds)">timerr/20</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6124096626616766">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2636422987889132" type="dial">
+                            <param id="0" name="Object">niceZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3414648714648605" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5337164871409552">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6686955120701586" type="dial">
+                            <param id="0" name="Object">notSoNice</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="198857748958902" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3691762208503496">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1621994880993796" type="dial">
+                            <param id="0" name="Object">awful</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2766782703506962" type="System">
+                            <param id="0" name="Variable">distorsion</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>call Escapar if Overlaping niceZone</comment>
+                <event-block sid="4946734162124931">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9468066297955378" type="dial">
+                            <param id="0" name="Object">niceZone</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7542245035052307" type="System">
+                            <param id="0" name="Variable">launch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-21" name="Is between values" sid="9760646230268996" type="System">
+                            <param id="0" name="Value">conta</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">100</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2776392809855402">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7991304509156056" type="System">
+                                    <param id="0" name="Variable">side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="515393698441644" type="Function">
+                                    <param id="0" name="Name">&quot;escaparR&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3776449528077267">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="272192224633484" type="System">
+                                    <param id="0" name="Variable">side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2065943916385711" type="Function">
+                                    <param id="0" name="Name">&quot;escaparL&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Bounce and Escape Functions</comment>
+        <event-block sid="2076263835000586">
+            <conditions>
+                <condition id="0" name="On function" sid="5166997956585082" type="Function">
+                    <param id="0" name="Name">&quot;rebotarL&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="6733175894884664" type="dial">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">-50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1909428741930141">
+            <conditions>
+                <condition id="0" name="On function" sid="1639879488168416" type="Function">
+                    <param id="0" name="Name">&quot;rebotarR&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="9106876342806463" type="dial">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6759361581772379">
+            <conditions>
+                <condition id="0" name="On function" sid="5929478605828378" type="Function">
+                    <param id="0" name="Name">&quot;escaparR&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3026334881567154" type="dial">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">-40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4439112309065093">
+            <conditions>
+                <condition id="0" name="On function" sid="9808417310926259" type="Function">
+                    <param id="0" name="Name">&quot;escapar&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="5243921656747004" type="dial">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">(random(-80,80))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="359381003188339">
+            <conditions>
+                <condition id="0" name="On function" sid="3051534348141372" type="Function">
+                    <param id="0" name="Name">&quot;escaparL&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="8079564585476008" type="dial">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4577956138466991">
+            <conditions>
+                <condition id="0" name="On function" sid="9808820648492036" type="Function">
+                    <param id="0" name="Name">&quot;zoomin&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="8569621033830959" type="System">
+                    <param id="0" name="Scale">i</param>
+                </action>
+                <action id="-10" name="Add to" sid="6865923842902478" type="System">
+                    <param id="0" name="Variable">i</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Paint on Skin Functions</comment>
+        <event-block collapsed="1" sid="2719063353893457">
+            <conditions>
+                <condition id="0" name="On function" sid="6794689945505889" type="Function">
+                    <param id="0" name="Name">&quot;pintar&quot;</param>
+                </condition>
+                <condition id="-13" name="Pick nth instance" sid="7559409762843675" type="System">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Instance">uma2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="4806666985767276" type="System">
+                    <param id="0" name="Variable">uma2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7850650624571309" type="blackInk">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action disabled="1" id="-11" name="Subtract from" sid="6008047764680121" type="System">
+                    <param id="0" name="Variable">uma</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2319752087647122" type="maquina">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="2757473368511648" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">point</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1399842463055701">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8556575747055058">
+            <conditions>
+                <condition id="0" name="On function" sid="8890227073630792" type="Function">
+                    <param id="0" name="Name">&quot;pintarmal&quot;</param>
+                </condition>
+                <condition id="-13" name="Pick nth instance" sid="2506198693366073" type="System">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Instance">uma2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="7381238732829664" type="System">
+                    <param id="0" name="Variable">uma2</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9877488683232376" type="blackInk">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="3629856899153241" type="blackInk">
+                    <param id="0" name="Width">5</param>
+                    <param id="1" name="Height">2</param>
+                </action>
+                <action id="-20" name="Rotate toward angle" sid="9623958047470177" type="blackInk">
+                    <param id="0" name="Degrees">45</param>
+                    <param id="1" name="Angle">22</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="8390789870804264" type="maquina">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="4911073444153767" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">point/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6048782445404433">
+            <conditions>
+                <condition id="0" name="On function" sid="9391246306647347" type="Function">
+                    <param id="0" name="Name">&quot;pintarmasmal&quot;</param>
+                </condition>
+                <condition id="-13" name="Pick nth instance" sid="5229523201735749" type="System">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Instance">uma2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="6976214152721673" type="System">
+                    <param id="0" name="Variable">uma2</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8335381054313461" type="blackInk">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="8413426652109232" type="blackInk">
+                    <param id="0" name="Width">20</param>
+                    <param id="1" name="Height">2</param>
+                </action>
+                <action id="-20" name="Rotate toward angle" sid="3267191295126112" type="blackInk">
+                    <param id="0" name="Degrees">45</param>
+                    <param id="1" name="Angle">22</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1440321144907004" type="maquina">
+                    <param id="0" name="Object">blackInk</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="0" name="Set text" sid="5613578020756868" type="uma2">
+                    <param id="0" name="Text">&quot;&quot;&amp;uma2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Extra Escapar</comment>
+        <event-block collapsed="1" disabled="1" sid="7363246470363347">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5960218455745671" type="System">
+                    <param id="0" name="Interval (seconds)">timerr/3</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="4885718534024024" type="niceZone">
+                    <param id="0" name="Object">niceZone</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4553371906759806" type="System">
+                    <param id="0" name="Variable">launch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="587321338587951" type="Function">
+                    <param id="0" name="Name">&quot;escapar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="1012416410866706">
+                    <conditions>
+                        <condition disabled="1" id="-14" name="Compare variable" sid="7155161762274624" type="System">
+                            <param id="0" name="Variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="9420163847158335">
+                    <conditions>
+                        <condition disabled="1" id="-14" name="Compare variable" sid="3073874877029016" type="System">
+                            <param id="0" name="Variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6227245923335093">
+            <conditions>
+                <condition id="0" name="On function" sid="4973118429538596" type="Function">
+                    <param id="0" name="Name">&quot;addLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4582876455789308">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9260180494243587" type="System">
+                            <param id="0" name="Variable">enter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4988090805304521" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4131475696765046" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
