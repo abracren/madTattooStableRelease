@@ -6,26 +6,74 @@
         <event-block sid="7213819559066708">
             <conditions>
                 <condition id="4" name="Is touching object" sid="6180055836013912" type="Touch">
-                    <param id="0" name="Object">SpriteFont2</param>
+                    <param id="0" name="Object">playBut</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="924760624407521" type="System">
-                    <param id="0" name="Layout">Layout 1</param>
+                    <param id="0" name="Layout">Dificult</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="4630384982970485" type="Sprite21">
                     <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6032430153571048">
+        <event-block sid="4818053681004473">
             <conditions>
-                <condition id="3" name="On touched object" sid="1459256946136086" type="Touch">
-                    <param id="0" name="Object">Sprite16</param>
+                <condition id="4" name="Is touching object" sid="9363010830354922" type="Touch">
+                    <param id="0" name="Object">Sprite26</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="3878820645040302" type="System">
+                <action id="-9" name="Set value" sid="2279819446445608" type="System">
+                    <param id="0" name="Variable">Dificult</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="759157468692308" type="Sprite21">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="9669594323150802" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="285433668540766" type="Sprite21">
+                    <param id="0" name="Speed">360</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="470946089700746">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="3732314013469256" type="Touch">
+                    <param id="0" name="Object">Sprite28</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2748485277867313" type="System">
+                    <param id="0" name="Variable">Dificult</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="4335863876535209" type="Sprite21">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6763078460775951" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119235459028072">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="2369835173400872" type="Touch">
+                    <param id="0" name="Object">Sprite27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="474959502808245" type="System">
+                    <param id="0" name="Variable">Dificult</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="4812297124313924" type="Sprite21">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="4748948526199855" type="System">
                     <param id="0" name="Layout">Layout 1</param>
                 </action>
             </actions>

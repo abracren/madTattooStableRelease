@@ -28041,36 +28041,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sf_Reduced3" uid="1279">
-                    <properties>
-                        <character-width>37</character-width>
-                        <character-height>36</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_#&quot;&apos;&amp;()/@+=*$£€&lt;&gt;</character-set>
-                        <text>/100</text>
-                        <scale>3</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>-35</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>358</x>
-                        <y>413</y>
-                        <z>0</z>
-                        <width>358</width>
-                        <height>108</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
                 <instance type="sf_Reduced4" uid="1280">
                     <properties>
                         <character-width>37</character-width>
@@ -28099,36 +28069,6 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sf_Reduced5" uid="1281">
-                    <properties>
-                        <character-width>37</character-width>
-                        <character-height>36</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_#&quot;&apos;&amp;()/@+=*$£€&lt;&gt;</character-set>
-                        <text>100</text>
-                        <scale>3</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>-35</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-44</x>
-                        <y>413</y>
-                        <z>0</z>
-                        <width>444</width>
-                        <height>108</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -28271,6 +28211,72 @@
                         <depth>0</depth>
                         <hotspotX>0.485207111</hotspotX>
                         <hotspotY>0.472222209</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="compleLevel50" uid="2968">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>386.007568359</x>
+                        <y>391.396728516</y>
+                        <z>0</z>
+                        <width>699</width>
+                        <height>129</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500742912</hotspotX>
+                        <hotspotY>2.049586773</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="compleLevel70" uid="2564">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>383</x>
+                        <y>378</y>
+                        <z>0</z>
+                        <width>673</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500742912</hotspotX>
+                        <hotspotY>2.049586773</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="compleLevel90" uid="5246">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>383</x>
+                        <y>377</y>
+                        <z>0</z>
+                        <width>673</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500742912</hotspotX>
+                        <hotspotY>2.049586773</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
                     </world>

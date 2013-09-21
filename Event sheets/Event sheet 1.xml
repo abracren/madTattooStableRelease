@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="win" sid="6454641182854153" static="0" type="number">2</variable>
+        <variable constant="0" name="win" sid="6454641182854153" static="0" type="number">5</variable>
         <variable constant="0" name="level" sid="5163647800632665" static="0" type="number">1</variable>
         <variable constant="0" name="reloaded" sid="6428476780005632" static="0" type="number">0</variable>
         <variable constant="0" name="dialPos" sid="2649941937588873" static="0" type="number">0</variable>
@@ -12,6 +12,7 @@
         <variable constant="0" name="uma" sid="1367074937731024" static="0" type="number">0</variable>
         <variable constant="0" name="randomizer" sid="325969173996481" static="0" type="number">0</variable>
         <variable constant="0" name="linex" sid="2806118076434136" static="0" type="number">10</variable>
+        <variable constant="0" name="Dificult" sid="5342243970982654" static="0" type="number">0</variable>
         <variable constant="0" name="conta" sid="9594896502776245" static="0" type="number">0</variable>
         <variable constant="0" name="point" sid="4971531027031044" static="0" type="number">0</variable>
         <variable constant="0" name="enter" sid="6011134181798651" static="0" type="number">0</variable>
@@ -63,6 +64,63 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="1441953007549115" title="Dificultad">
+            <sub-events>
+                <event-block sid="9868733160249933">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1613895504163084" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="416280658722798">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9262202150626882" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7066478379028744" type="System">
+                                    <param id="0" name="Variable">win</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8361651356562081">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9220731286071959" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8004019935077837" type="System">
+                                    <param id="0" name="Variable">win</param>
+                                    <param id="1" name="Value">70</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9013714911380736">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9418167910669335" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5595554272058542" type="System">
+                                    <param id="0" name="Variable">win</param>
+                                    <param id="1" name="Value">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="2460576020824341">
             <conditions />
             <actions />
@@ -140,164 +198,221 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Controles</comment>
-        <event-block sid="2369637943158991">
-            <conditions />
-            <actions />
+        <event-group description="" sid="9386698641446106" title="Mandos">
             <sub-events>
-                <event-block sid="8802401006247341">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="839748496985022" type="Touch">
-                            <param id="0" name="Object">rightControlI</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="9169649741907201" type="dial">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9221106105813053">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="1511557953032069" type="Touch">
-                            <param id="0" name="Object">LeftControlI</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="2761102509880111" type="dial">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4284849777945084">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="6768512046478069" type="Touch">
-                            <param id="0" name="Object">restarting</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="3478445849034454" type="System">
-                            <param id="0" name="Variable">reloaded</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="4338250037063868" type="System">
-                            <param id="0" name="Layout">menu</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7370609661359081">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="3034051889602057" type="Touch">
-                            <param id="0" name="Object">mainmenu</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="3859796855758617" type="System">
-                            <param id="0" name="Layout">menu</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1406861847769782">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="2332011732717282" type="Touch">
-                            <param id="0" name="Object">restartBut</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6838803063463324" type="System">
-                            <param id="0" name="Variable">reloaded</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2123623327261462">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="2865116441792522" type="Touch">
-                            <param id="0" name="Object">NextBut</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7127568043790239" type="System">
-                            <param id="0" name="Variable">reloaded</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                <event-block sid="6100249605698916">
+                    <conditions />
+                    <actions />
                     <sub-events>
-                        <event-block sid="958653223087282">
+                        <event-block sid="4284849777945084">
                             <conditions>
-                                <condition id="0" name="On any touch start" sid="7877884155832466" type="Touch" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="8313103981919288" type="Function">
-                                    <param id="0" name="Name">&quot;addLevel&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8180928865048847">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="8934681314472844" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="3" name="On touched object" sid="6768512046478069" type="Touch">
+                                    <param id="0" name="Object">restarting</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="2914979342648906" type="System">
-                                    <param id="0" name="Layout">Layout 1</param>
+                                <action id="-12" name="Set group active" sid="3236451532670034" type="System">
+                                    <param id="0" name="Group name">&quot;Controles&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9628882209548711">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="2821452992603774" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="1502537691594957" type="System">
-                                    <param id="0" name="Layout">Layout 2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3106423491604089">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="1773111849063578" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="2653969767199064" type="System">
-                                    <param id="0" name="Layout">Layout 3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6328282358932831">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="7503907722113833" type="System">
-                                    <param id="0" name="Variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="8670745654061408" type="System">
-                                    <param id="0" name="Variable">level</param>
+                                <action id="-9" name="Set value" sid="3478445849034454" type="System">
+                                    <param id="0" name="Variable">reloaded</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="1382276503638539" type="System">
+                                <action id="-2" name="Go to layout" sid="4338250037063868" type="System">
                                     <param id="0" name="Layout">menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8802401006247341">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="839748496985022" type="Touch">
+                                    <param id="0" name="Object">rightControlI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="9169649741907201" type="dial">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9221106105813053">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="1511557953032069" type="Touch">
+                                    <param id="0" name="Object">LeftControlI</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="2761102509880111" type="dial">
+                                    <param id="0" name="Control">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" inactive="1" sid="8816791592727858" title="Controles">
+            <sub-events>
+                <event-block sid="2369637943158991">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7370609661359081">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="3034051889602057" type="Touch">
+                                    <param id="0" name="Object">mainmenu</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3859796855758617" type="System">
+                                    <param id="0" name="Layout">menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1406861847769782">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="2332011732717282" type="Touch">
+                                    <param id="0" name="Object">restartBut</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6838803063463324" type="System">
+                                    <param id="0" name="Variable">reloaded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="8295887280018892" type="System">
+                                    <param id="0" name="Group name">&quot;Controles&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2123623327261462">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="2865116441792522" type="Touch">
+                                    <param id="0" name="Object">NextBut</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7127568043790239" type="System">
+                                    <param id="0" name="Variable">reloaded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="5881289868631929" type="System">
+                                    <param id="0" name="Group name">&quot;Controles&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="958653223087282">
+                                    <conditions>
+                                        <condition id="0" name="On any touch start" sid="7877884155832466" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8313103981919288" type="Function">
+                                            <param id="0" name="Name">&quot;addLevel&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8180928865048847">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8934681314472844" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="2914979342648906" type="System">
+                                            <param id="0" name="Layout">Layout 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9628882209548711">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2821452992603774" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1502537691594957" type="System">
+                                            <param id="0" name="Layout">Layout 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3106423491604089">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1773111849063578" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="2653969767199064" type="System">
+                                            <param id="0" name="Layout">Layout 3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6328282358932831">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7503907722113833" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1382276503638539" type="System">
+                                            <param id="0" name="Layout">Layout 4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9680716592887728">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6062898156366269" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="8486267755455919" type="System">
+                                            <param id="0" name="Layout">Layout 5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1006116489605292">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9817299386863251" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="405652627400579" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="1599814621903462" type="System">
+                                            <param id="0" name="Layout">menu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7024802206432856">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>hiding Ink</comment>
         <event-block sid="3319415103639469">
             <conditions>
@@ -551,8 +666,54 @@
                         <action id="-16" name="Set opacity" sid="9632448286122588" type="restarting">
                             <param id="0" name="Opacity">0</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="6854843529951137" type="System">
+                            <param id="0" name="Group name">&quot;Controles&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="5576778165653331">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="575172558273177" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="4778932306234304" type="compleLevel50">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1726441588719266">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3496462222085959" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="309288920499937" type="compleLevel70">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1360313404033469">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1730840217493709" type="System">
+                                    <param id="0" name="Variable">Dificult</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="7770297174151615" type="compleLevel90">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="1792716835677096">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5495754307480988" type="System">
@@ -948,7 +1109,7 @@
             <actions>
                 <action id="-10" name="Add to" sid="7381238732829664" type="System">
                     <param id="0" name="Variable">uma2</param>
-                    <param id="1" name="Value">2</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9877488683232376" type="blackInk">
                     <param id="0" name="Visibility">1</param>
@@ -971,7 +1132,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6048782445404433">
+        <event-block bookmark="1" sid="6048782445404433">
             <conditions>
                 <condition id="0" name="On function" sid="9391246306647347" type="Function">
                     <param id="0" name="Name">&quot;pintarmasmal&quot;</param>
@@ -1076,5 +1237,6 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="6984210568534661" title="webstore" />
     </events>
 </c2eventsheet>
